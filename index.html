@@ -52,9 +52,15 @@
     }
     .section {
       padding: 40px 20px;
-      background: #fff;
       max-width: 900px;
       margin: auto;
+    }
+    .section.gray {
+      background: #f2f2f2;
+    }
+    .section.dark {
+      background: #111;
+      color: #fff;
     }
     .section h2 {
       font-size: 24px;
@@ -73,10 +79,15 @@
       margin-top: 30px;
     }
     .feature, .step {
-      background: #f0f0f0;
+      background: #fff;
       padding: 20px;
       border-radius: 10px;
       text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .dark .feature, .dark .step {
+      background: #222;
+      color: #fff;
     }
     .compare-table {
       width: 100%;
@@ -88,23 +99,38 @@
       padding: 12px;
       text-align: center;
     }
-    .quote {
-      background: #111;
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
+    .logos {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .logos img {
+      height: 40px;
+    }
+    .quote-card {
+      background: #fff;
+      border-left: 4px solid #00b364;
+      padding: 20px;
+      margin: 40px auto;
+      max-width: 700px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
       font-style: italic;
     }
-    .quote small {
+    .quote-card small {
       display: block;
-      margin-top: 12px;
+      margin-top: 10px;
       font-style: normal;
-      color: #ccc;
+      color: #555;
     }
     #banner-container {
-      max-width: 320px;
+      max-width: 360px;
       margin: 40px auto;
       text-align: center;
+      background: #1c1c1c;
+      padding: 20px;
+      border-radius: 12px;
     }
     footer {
       background: #111;
@@ -137,14 +163,14 @@
 </section>
 
 <section class="section">
-  <h2>Why BitStarz?</h2>
-  <p>BitStarz is known for its proven reliability among VIP users. With over 10 years in the industry, it offers instant crypto payouts, verifiable transaction history, and unrestricted withdrawal policies. Unlike most platforms, BitStarz doesn’t rely on third-party wallets – all payouts are direct, without KYC delays or hidden processing times. That’s what makes it ideal for high rollers.</p>
+  <h2>Why High-Rollers Choose BitStarz</h2>
+  <p>BitStarz is known for its proven reliability among VIP users. With over 10 years in the industry, it offers instant crypto payouts, verifiable transaction history, and unrestricted withdrawal policies. No third-party wallets. No KYC delays. Just pure, unrestricted access.</p>
 </section>
 
-<section class="section">
+<section class="section gray">
   <h2>Top Advantages</h2>
   <div class="features">
-    <div class="feature">⚡ Instant Crypto Withdrawals</div>
+<div class="feature">⚡ Instant Crypto Withdrawals</div>
     <div class="feature">🧾 Documented Transactions</div>
     <div class="feature">🎯 No Hidden Fees or Middlemen</div>
     <div class="feature">🔒 Verified Platform since 2014</div>
@@ -156,12 +182,12 @@
   <div class="steps">
     <div class="step">📝 Register — 1-minute signup</div>
     <div class="step">💳 Deposit — BTC, ETH, fiat</div>
-<div class="step">🎮 Play — Slots, live tables</div>
+    <div class="step">🎮 Play — Slots, live tables</div>
     <div class="step">🚀 Withdraw — Fast, no limits</div>
   </div>
 </section>
 
-<section class="section">
+<section class="section gray">
   <h2>Why We Recommend BitStarz</h2>
   <div class="features">
     <div class="feature">🧠 Thoroughly tested</div>
@@ -172,7 +198,7 @@
 </section>
 
 <section class="section">
-  <h2>Compare Platforms</h2>
+  <h2>BitStarz vs Typical Casinos</h2>
   <table class="compare-table">
     <tr><th>Feature</th><th>BitStarz ✅</th><th>Typical Casino ❌</th></tr>
     <tr><td>Instant withdrawals</td><td>Yes</td><td>No</td></tr>
@@ -182,18 +208,29 @@
   </table>
 </section>
 
-<section class="quote">
-  <p>“After testing 15+ platforms, BitStarz stood out. 100% transparent, fast payouts, and excellent support.”</p>
+<div class="quote-card">
+  “After testing 15+ platforms, BitStarz stood out. 100% transparent, fast payouts, and excellent support.”
   <small>— HighRollerStar Analyst</small>
-</section>
-
-<div id="banner-container">
-  <script type="text/javascript" src="https://bzstarz.com/sources/b54f622d2.js"></script>
 </div>
 
+<section class="section dark">
+  <h2>🎁 Official Bonus Offer</h2>
+  <p style="text-align:center">Up to 5 BTC + 200 free spins — exclusive for HighRollerStar users</p>
+  <div id="banner-container">
+    <script type="text/javascript" src="https://bzstarz.com/sources/b54f622d2.js"></script>
+    <br><br>
+    <a class="cta-button" href="https://bzstarz.com/b65d7bc9d">Claim Your Bonus</a>
+  </div>
+</section>
+
+<section class="section">
+  <h2>💬 Join Our Private Telegram Club</h2>
+  <p style="text-align:center">Access VIP deals, early tips, and direct support from our team.</p>
+  <p style="text-align:center"><a class="cta-button" href="https://t.me/higrollerchat">Join @higrollerchat</a></p>
+</section>
+
 <footer>
-  <p>Join our Telegram channel: <a href="https://t.me/higrollerchat" target="_blank">@higrollerchat</a></p>
-  <p>Join our high roller crypto community.</p>
+  <p>HighRollerStar © All rights reserved.</p>
 </footer>
 </body>
 </html>
