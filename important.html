@@ -50,7 +50,7 @@
     }
     .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 24px;
       margin-top: 40px;
     }
@@ -62,7 +62,9 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
     .feature.family {
+      grid-column: span 2;
       border: 2px solid #ffc107;
+      background: #1d1f27;
     }
     .cta-button {
       display: inline-block;
@@ -76,18 +78,20 @@
       text-decoration: none;
       box-shadow: 0 4px 12px rgba(0,179,100,0.4);
     }
-    .final-cta {
-      background: url('https://tse4.mm.bing.net/th?id=OIP.vhOBlPVtacPcC1TpBFOuYAHaEK&pid=Api') no-repeat center center;
+    .final-texture {
+      background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.85)), url('https://tse4.mm.bing.net/th?id=OIP.vhOBlPVtacPcC1TpBFOuYAHaEK&pid=Api') no-repeat center center;
       background-size: cover;
-      padding: 60px 20px;
       text-align: center;
+      padding: 80px 20px;
     }
-    .final-cta h2 {
+    .final-texture h2 {
+      font-size: 24px;
       color: #ffc107;
-      margin-bottom: 20px;
+      margin-bottom: 12px;
     }
-    .final-cta p {
-      color: #f1f1f1;
+    .final-texture p {
+      font-size: 18px;
+      color: #eee;
     }
     footer {
       background: #101218;
@@ -139,10 +143,9 @@
   <a class="cta-button" href="https://t.me/VipHighrollerStar">Join the Telegram Family</a>
 </section>
 
-<section class="final-cta">
-  <h2>Don't wait for it to get hot. Be the spark.</h2>
-  <p>The channel is quiet now — but it won't stay quiet for long. I'm gathering my crew.</p>
-  <a class="cta-button" href="https://t.me/VipHighrollerStar">Enter the Channel Now</a>
+<section class="final-texture">
+  <h2>This is just the beginning.</h2>
+  <p>What comes next — you’ll help build it. Be early. Be inside.</p>
 </section>
 
 <footer>
