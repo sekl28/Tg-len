@@ -112,13 +112,40 @@
       font-style: normal;
       color: #aaa;
     }
-    #banner-container {
-      max-width: 360px;
-      margin: 40px auto;
+    .bonus-offer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 60px;
+      background: #141414;
+      padding: 40px 20px;
+      border-radius: 20px;
+    }
+    .bonus-text {
+      max-width: 420px;
+    }
+    .bonus-text h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .bonus-text p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .bonus-image img {
+      width: 240px;
+      border-radius: 12px;
+    }
+    .final-cta {
+      background: linear-gradient(to right, #0f0f0f, #1c1c1c);
       text-align: center;
-      background: #1a1a1a;
-      padding: 24px;
-      border-radius: 16px;
+      padding: 60px 20px;
+    }
+    .final-cta h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
     }
     footer {
       background: #101218;
@@ -149,7 +176,6 @@
   <p>All transactions documented. Limits are not a restriction.</p>
   <a class="cta-button" href="https://bzstarz.com/b65d7bc9d">Join BitStarz</a>
 </section>
-
 <section class="section">
   <h2>Why High-Rollers Choose BitStarz</h2>
   <p>BitStarz has been the top choice of high-stakes players for over 10 years. Instant crypto payouts. Verifiable transactions. No middlemen. No excuses.</p>
@@ -164,6 +190,7 @@
     <div class="feature">🔒 Verified Platform since 2014</div>
   </div>
 </section>
+
 <section class="section">
   <h2>How It Works</h2>
   <div class="steps">
@@ -200,23 +227,25 @@
   <small>— HighRollerStar Analyst</small>
 </div>
 
-<section class="section">
-  <h2>🎁 Official Bonus Offer</h2>
-  <p style="text-align:center">Up to 5 BTC + 200 free spins — exclusive for HighRollerStar users</p>
-  <div id="banner-container">
-    <script type="text/javascript" src="https://bzstarz.com/sources/b54f622d2.js"></script>
-    <br><br>
+<section class="bonus-offer">
+  <div class="bonus-image">
+    <img src="https://bzstarz.com/images/bonus.jpg" alt="BitStarz Bonus">
+  </div>
+  <div class="bonus-text">
+    <h2>🎁 Official Bonus Offer</h2>
+    <p>Up to 5 BTC + 200 free spins — exclusive for HighRollerStar users. Activate your elite bonus package now and experience the difference.</p>
     <a class="cta-button" href="https://bzstarz.com/b65d7bc9d">Claim Your Bonus</a>
   </div>
 </section>
 
-<section class="section">
-  <h2>💬 Join Our Private Telegram Club</h2>
-  <p>Access VIP deals, early tips, and direct support from our team.</p>
-  <p><a class="cta-button" href="https://t.me/higrollerchat">Join @higrollerchat</a></p>
+<section class="final-cta">
+  <h2>Ready to experience real high-roller gameplay?</h2>
+  <p style="font-size:17px; margin-bottom:30px;">Instant payouts. No limits. Full control. Join the elite today.</p>
+  <a class="cta-button" href="https://bzstarz.com/b65d7bc9d">Join BitStarz Now</a>
 </section>
 
 <footer>
+  <p>Join our Telegram: <a href="https://t.me/higrollerchat">@higrollerchat</a></p>
   <p>HighRollerStar © All rights reserved.</p>
 </footer>
 </body>
