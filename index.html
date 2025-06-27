@@ -8,86 +8,82 @@
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background: #f9f9f9;
-      color: #111;
+      background: #0b0c10;
+      color: #f1f1f1;
     }
     header {
-      background: #fff;
+      background: #101218;
       padding: 16px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid #222;
     }
     header nav a {
       margin-left: 16px;
-      color: #333;
+      color: #ccc;
       text-decoration: none;
       font-weight: 500;
     }
     .hero {
-      background: linear-gradient(to bottom right, #0e0e1c, #1c1c3c);
+      background: linear-gradient(to bottom right, #0f1117, #1a1c25);
       color: #fff;
       padding: 60px 20px 40px;
       text-align: center;
     }
     .hero h1 {
-      font-size: 32px;
-      margin-bottom: 12px;
+      font-size: 36px;
+      margin-bottom: 16px;
     }
     .hero p {
       font-size: 18px;
-      margin-bottom: 24px;
+      margin-bottom: 30px;
     }
     .cta-button {
       background: #00b364;
       color: white;
-      padding: 14px 28px;
-      font-size: 16px;
-      font-weight: 600;
+      padding: 16px 32px;
+      font-size: 18px;
+      font-weight: 700;
       border: none;
-      border-radius: 8px;
+      border-radius: 12px;
       cursor: pointer;
       text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0, 179, 100, 0.3);
+      transition: all 0.3s ease;
+    }
+    .cta-button:hover {
+      background: #00a358;
     }
     .section {
-      padding: 40px 20px;
-      max-width: 900px;
+      padding: 60px 20px;
+      max-width: 1000px;
       margin: auto;
     }
-    .section.gray {
-      background: #f2f2f2;
-    }
-    .section.dark {
-      background: #111;
-      color: #fff;
-    }
     .section h2 {
-      font-size: 24px;
-      margin-bottom: 16px;
+      font-size: 28px;
+      margin-bottom: 20px;
       text-align: center;
     }
     .section p {
-      font-size: 16px;
-      line-height: 1.6;
-      margin-bottom: 16px;
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      text-align: center;
     }
     .features, .steps {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
     }
     .feature, .step {
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
+      background: #171a22;
+      padding: 24px;
+      border-radius: 12px;
       text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-    .dark .feature, .dark .step {
-      background: #222;
-      color: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      font-size: 16px;
     }
     .compare-table {
       width: 100%;
@@ -95,46 +91,38 @@
       margin-top: 30px;
     }
     .compare-table th, .compare-table td {
-      border: 1px solid #ddd;
-      padding: 12px;
+      border: 1px solid #333;
+      padding: 14px;
       text-align: center;
     }
-    .logos {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin-top: 20px;
-      flex-wrap: wrap;
-    }
-    .logos img {
-      height: 40px;
+    .compare-table th {
+      background: #1c1f2b;
     }
     .quote-card {
-      background: #fff;
+      background: #161920;
       border-left: 4px solid #00b364;
-      padding: 20px;
-      margin: 40px auto;
-      max-width: 700px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      padding: 24px;
+      margin: 60px auto;
+      max-width: 800px;
       font-style: italic;
     }
     .quote-card small {
       display: block;
-      margin-top: 10px;
+      margin-top: 12px;
       font-style: normal;
-      color: #555;
+      color: #aaa;
     }
     #banner-container {
       max-width: 360px;
       margin: 40px auto;
       text-align: center;
-      background: #1c1c1c;
-      padding: 20px;
-      border-radius: 12px;
+      background: #1a1a1a;
+      padding: 24px;
+      border-radius: 16px;
     }
     footer {
-      background: #111;
-      color: #fff;
+      background: #101218;
+      color: #888;
       text-align: center;
       padding: 20px;
       font-size: 14px;
@@ -148,7 +136,7 @@
 </head>
 <body>
 <header>
-  <div><strong>BitStarz</strong></div>
+  <div><strong style="color:#00b364; font-size:18px;">HighRollerStar</strong></div>
   <nav>
     <a href="#">Home</a>
     <a href="#">FAQ</a>
@@ -164,19 +152,18 @@
 
 <section class="section">
   <h2>Why High-Rollers Choose BitStarz</h2>
-  <p>BitStarz is known for its proven reliability among VIP users. With over 10 years in the industry, it offers instant crypto payouts, verifiable transaction history, and unrestricted withdrawal policies. No third-party wallets. No KYC delays. Just pure, unrestricted access.</p>
+  <p>BitStarz has been the top choice of high-stakes players for over 10 years. Instant crypto payouts. Verifiable transactions. No middlemen. No excuses.</p>
 </section>
 
-<section class="section gray">
+<section class="section">
   <h2>Top Advantages</h2>
   <div class="features">
-<div class="feature">⚡ Instant Crypto Withdrawals</div>
+    <div class="feature">⚡ Instant Crypto Withdrawals</div>
     <div class="feature">🧾 Documented Transactions</div>
-    <div class="feature">🎯 No Hidden Fees or Middlemen</div>
+    <div class="feature">🎯 No Hidden Fees</div>
     <div class="feature">🔒 Verified Platform since 2014</div>
   </div>
 </section>
-
 <section class="section">
   <h2>How It Works</h2>
   <div class="steps">
@@ -187,13 +174,13 @@
   </div>
 </section>
 
-<section class="section gray">
+<section class="section">
   <h2>Why We Recommend BitStarz</h2>
   <div class="features">
     <div class="feature">🧠 Thoroughly tested</div>
-    <div class="feature">🔍 Full payout history verified</div>
-    <div class="feature">📞 24/7 support evaluated</div>
-    <div class="feature">🛡️ Safe for high-volume users</div>
+    <div class="feature">🔍 Payouts verified</div>
+    <div class="feature">📞 24/7 Support</div>
+    <div class="feature">🛡️ Designed for VIP users</div>
   </div>
 </section>
 
@@ -213,7 +200,7 @@
   <small>— HighRollerStar Analyst</small>
 </div>
 
-<section class="section dark">
+<section class="section">
   <h2>🎁 Official Bonus Offer</h2>
   <p style="text-align:center">Up to 5 BTC + 200 free spins — exclusive for HighRollerStar users</p>
   <div id="banner-container">
@@ -225,8 +212,8 @@
 
 <section class="section">
   <h2>💬 Join Our Private Telegram Club</h2>
-  <p style="text-align:center">Access VIP deals, early tips, and direct support from our team.</p>
-  <p style="text-align:center"><a class="cta-button" href="https://t.me/higrollerchat">Join @higrollerchat</a></p>
+  <p>Access VIP deals, early tips, and direct support from our team.</p>
+  <p><a class="cta-button" href="https://t.me/higrollerchat">Join @higrollerchat</a></p>
 </section>
 
 <footer>
