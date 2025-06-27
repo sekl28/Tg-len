@@ -25,6 +25,10 @@
       text-decoration: none;
       font-weight: 500;
     }
+    .brand {
+      color: #ffc107;
+      font-size: 18px;
+    }
     .section {
       padding: 60px 20px;
       max-width: 1000px;
@@ -72,6 +76,21 @@
       text-decoration: none;
       box-shadow: 0 4px 12px rgba(0, 179, 100, 0.3);
     }
+    .floating-btn {
+      position: fixed;
+      left: 24px;
+      bottom: 24px;
+      background: #00b364;
+      color: white;
+      padding: 14px 24px;
+      font-size: 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 4px 14px rgba(0, 179, 100, 0.4);
+      display: none;
+      z-index: 1000;
+    }
     footer {
       background: #101218;
       color: #888;
@@ -88,12 +107,12 @@
 </head>
 <body>
 <header>
-  <div><strong style="color:#00b364; font-size:18px;">HighRollerStar</strong></div>
+  <div class="brand">HighRollerStar</div>
   <nav>
     <a href="index.html">Home</a>
-    <a href="faq.html">FAQ</a>
     <a href="vip.html">VIP Program</a>
     <a href="important.html">Important to Know</a>
+    <a href="faq.html">FAQ</a>
   </nav>
 </header>
 
@@ -135,9 +154,22 @@
   </div>
 </section>
 
+<a href="https://bzstarz.com/b65d7bc9d" class="floating-btn" id="joinBtn">Join Now</a>
+
 <footer>
   <p>Join our Telegram: <a href="https://t.me/higrollerchat">@higrollerchat</a></p>
   <p>HighRollerStar © All rights reserved.</p>
 </footer>
+
+<script>
+  const joinBtn = document.getElementById('joinBtn');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      joinBtn.style.display = 'block';
+    } else {
+      joinBtn.style.display = 'none';
+    }
+  });
+</script>
 </body>
 </html>
