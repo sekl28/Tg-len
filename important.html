@@ -140,7 +140,7 @@
     <div class="feature">🏆 <strong>Your Wins, Shared</strong><br>Screenshots, emotions, massive hits. This is your stage too.</div>
     <div class="feature family">👑 <strong>A Family, Not a Forum</strong><br>Handpicked people only. Elite, fearless, addicted to the game.</div>
   </div>
-  <a class="cta-button" href="https://t.me/VipHighrollerStar">Join the Telegram Family</a>
+  <a class="cta-button" href="#" onclick="goTelegram()">Join the Telegram Family</a>
 </section>
 
 <section class="final-texture">
@@ -151,5 +151,21 @@
 <footer>
   <p>HighRollerStar © All rights reserved.</p>
 </footer>
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const clickid = urlParams.get('clickid');
+
+  function goTelegram() {
+    if (clickid) {
+      fetch("https://offers.propellerads.com/conversion?clickid=" + clickid)
+        .then(() => {
+          window.location.href = "https://t.me/VipHighrollerStar";
+        });
+    } else {
+      window.location.href = "https://t.me/VipHighrollerStar";
+    }
+  }
+</script>
 </body>
 </html>
