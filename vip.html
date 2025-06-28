@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BitStarz VIP Program — HighRollerStar</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MSYQ4BSVX3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MSYQ4BSVX3');
+  </script>
   <style>
     body {
       margin: 0;
@@ -19,15 +26,52 @@
       align-items: center;
       border-bottom: 1px solid #222;
     }
-    header nav a {
-      margin-left: 16px;
+    .brand {
+      color: #ffc107;
+      font-size: 20px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+    }
+    .brand::before {
+      content: "\1F48E";
+      margin-right: 8px;
+    }
+    nav {
+      display: flex;
+      gap: 16px;
+    }
+    nav a {
       color: #ccc;
       text-decoration: none;
       font-weight: 500;
     }
-    .brand {
-      color: #ffc107;
-      font-size: 18px;
+    .burger {
+      display: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .burger div {
+      width: 24px;
+      height: 3px;
+      background: #fff;
+    }
+    .burger-menu {
+      display: none;
+      position: absolute;
+      right: 20px;
+      top: 60px;
+      background: #101218;
+      padding: 12px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+    .burger-menu a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 0;
     }
     .section {
       padding: 60px 20px;
@@ -103,17 +147,36 @@
       text-decoration: none;
       font-weight: bold;
     }
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+      .burger {
+        display: flex;
+      }
+    }
   </style>
 </head>
 <body>
 <header>
   <div class="brand">HighRollerStar</div>
-  <nav>
+  <nav id="mainNav">
     <a href="index.html">Home</a>
     <a href="vip.html">VIP Program</a>
     <a href="important.html">Important to Know</a>
     <a href="faq.html">FAQ</a>
   </nav>
+  <div class="burger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="burger-menu" id="burgerMenu">
+    <a href="index.html">Home</a>
+    <a href="vip.html">VIP Program</a>
+    <a href="important.html">Important to Know</a>
+    <a href="faq.html">FAQ</a>
+  </div>
 </header>
 
 <section class="section">
@@ -164,12 +227,13 @@
 <script>
   const joinBtn = document.getElementById('joinBtn');
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-      joinBtn.style.display = 'block';
-    } else {
-      joinBtn.style.display = 'none';
-    }
+    joinBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
   });
+
+  function toggleMenu() {
+    const menu = document.getElementById('burgerMenu');
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  }
 </script>
 </body>
 </html>
