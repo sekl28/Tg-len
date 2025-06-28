@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FAQ — HighRollerStar</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MSYQ4BSVX3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MSYQ4BSVX3');
+  </script>
   <style>
     body {
       margin: 0;
@@ -19,11 +26,52 @@
       align-items: center;
       border-bottom: 1px solid #222;
     }
-    header nav a {
-      margin-left: 16px;
+    .brand {
+      color: #ffc107;
+      font-size: 20px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+    }
+    .brand::before {
+      content: "\1F48E";
+      margin-right: 8px;
+    }
+    nav {
+      display: flex;
+      gap: 16px;
+    }
+    nav a {
       color: #ccc;
       text-decoration: none;
       font-weight: 500;
+    }
+    .burger {
+      display: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .burger div {
+      width: 24px;
+      height: 3px;
+      background: #fff;
+    }
+    .burger-menu {
+      display: none;
+      position: absolute;
+      right: 20px;
+      top: 60px;
+      background: #101218;
+      padding: 12px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+    .burger-menu a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 0;
     }
     .section {
       max-width: 900px;
@@ -65,6 +113,21 @@
       text-decoration: none;
       box-shadow: 0 4px 12px rgba(0,179,100,0.4);
     }
+    .floating-btn {
+      position: fixed;
+      left: 24px;
+      bottom: 24px;
+      background: #00b364;
+      color: white;
+      padding: 14px 24px;
+      font-size: 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 4px 14px rgba(0, 179, 100, 0.4);
+      display: none;
+      z-index: 1000;
+    }
     footer {
       background: #101218;
       color: #888;
@@ -77,17 +140,36 @@
       text-decoration: none;
       font-weight: bold;
     }
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+      .burger {
+        display: flex;
+      }
+    }
   </style>
 </head>
 <body>
 <header>
-  <div><strong style="color:#00b364; font-size:18px;">HighRollerStar</strong></div>
-  <nav>
+  <div class="brand">HighRollerStar</div>
+  <nav id="mainNav">
     <a href="index.html">Home</a>
     <a href="faq.html">FAQ</a>
     <a href="vip.html">VIP Program</a>
     <a href="important.html">Important to Know</a>
   </nav>
+  <div class="burger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="burger-menu" id="burgerMenu">
+    <a href="index.html">Home</a>
+    <a href="faq.html">FAQ</a>
+    <a href="vip.html">VIP Program</a>
+    <a href="important.html">Important to Know</a>
+  </div>
 </header>
 
 <section class="section">
@@ -134,8 +216,23 @@
   </div>
 </section>
 
+<a href="https://bzstarz.com/b65d7bc9d" class="floating-btn" id="joinBtn">Join Now</a>
+
 <footer>
+  <p>Join our Telegram: <a href="https://t.me/higrollerchat">@higrollerchat</a></p>
   <p>HighRollerStar © All rights reserved.</p>
 </footer>
+
+<script>
+  const joinBtn = document.getElementById('joinBtn');
+  window.addEventListener('scroll', () => {
+    joinBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+  });
+
+  function toggleMenu() {
+    const menu = document.getElementById('burgerMenu');
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
 </body>
 </html>
