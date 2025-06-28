@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FAQ — HighRollerStar</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MSYQ4BSVX3"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-MSYQ4BSVX3');
   </script>
@@ -25,6 +25,7 @@
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid #222;
+      position: relative;
     }
     .brand {
       color: #ffc107;
@@ -65,7 +66,8 @@
       background: #101218;
       padding: 12px;
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+      z-index: 1000;
     }
     .burger-menu a {
       display: block;
@@ -88,7 +90,7 @@
       border-radius: 12px;
       margin-bottom: 20px;
       padding: 20px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
     summary {
       font-size: 18px;
@@ -111,7 +113,7 @@
       padding: 16px 32px;
       border-radius: 12px;
       text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0, 179, 100, 0.4);
+      box-shadow: 0 4px 12px rgba(0,179,100,0.4);
     }
     footer {
       background: #101218;
@@ -136,32 +138,74 @@
   </style>
 </head>
 <body>
-  <header>
-    <div class="brand">HighRollerStar</div>
-    <nav id="mainNav">
-      <a href="index.html">Home</a>
-      <a href="faq.html">FAQ</a>
-      <a href="vip.html">VIP Program</a>
-      <a href="important.html">Important to Know</a>
-    </nav>
-    <div class="burger" onclick="toggleMenu()">
-      <div></div><div></div><div></div>
-    </div>
-    <div class="burger-menu" id="burgerMenu">
-      <a href="index.html">Home</a>
-      <a href="faq.html">FAQ</a>
-      <a href="vip.html">VIP Program</a>
-      <a href="important.html">Important to Know</a>
-    </div>
-  </header>
+<header>
+  <div class="brand">HighRollerStar</div>
+  <nav id="mainNav">
+    <a href="index.html">Home</a>
+    <a href="faq.html">FAQ</a>
+    <a href="vip.html">VIP Program</a>
+    <a href="important.html">Important to Know</a>
+  </nav>
+  <div class="burger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="burger-menu" id="burgerMenu">
+    <a href="index.html">Home</a>
+    <a href="faq.html">FAQ</a>
+    <a href="vip.html">VIP Program</a>
+    <a href="important.html">Important to Know</a>
+  </div>
+</header>
 
-  <section class="section">
-    <h1>Frequently Asked Questions</h1>
+<section class="section">
+  <h1>Frequently Asked Questions</h1>
 
-    <details>
-      <summary>🎖️ How do I join the VIP (VIP Starz Club)?</summary>
-      <p>You can either deposit at least €1,000 and select the VIP bonus to enter directly — or become a regular high-stakes player with deposits over $30,000 monthly to receive a personal invitation.</p>
-    </details>
+  <details>
+    <summary>🎖️ How do I join the VIP (VIP Starz Club)?</summary>
+    <p>You can either deposit at least €1,000 and select the VIP bonus to enter directly — or become a regular high-stakes player with deposits over $30,000 monthly to receive a personal invitation.</p>
+  </details>
+  <details>
+    <summary>💰 What perks does the VIP Club offer?</summary>
+    <p>Weekly cashback with no limits, surprise reload bonuses, instant crypto payouts, 24/7 personal support, tailored bonus structures, and early access to games and tournaments.</p>
+  </details>
+  <details>
+    <summary>🏁 How high must my stakes be to qualify?</summary>
+    <p>Typical VIP players deposit and wager $30,000 to $100,000 monthly. Alternatively, a one-time VIP bonus is available upon a €1,000+ deposit.</p>
+  </details>
+  <details>
+    <summary>🚫 Are there wagering or withdrawal limits for VIPs?</summary>
+    <p>No. VIP members enjoy full freedom: unlimited withdrawals and cashback with zero restrictions or rollover.</p>
+  </details>
+  <details>
+    <summary>🔄 How often do VIPs get cashback and bonuses?</summary>
+    <p>Weekly cashback and exclusive reloads are available constantly, along with seasonal promotions just for VIPs.</p>
+  </details>
+  <details>
+    <summary>📞 What support do VIPs receive?</summary>
+    <p>Dedicated 24/7 VIP support via WhatsApp or email — personalized assistance any time, any day.</p>
+  </details>
+  <details>
+    <summary>🎮 Can I access new games early?</summary>
+    <p>Yes. VIPs get first access to new releases, slot titles, and upcoming casino experiences before public rollout.</p>
+  </details>
 
-    <details>
-      <summary>
+  <div class="cta">
+    <h2>Ready to Join?</h2>
+    <a href="https://bzstarz.com/b95aa55a4">Join VIP Program</a>
+  </div>
+</section>
+
+<footer>
+  <p>HighRollerStar © All rights reserved.</p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('burgerMenu');
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+</body>
+</html>
