@@ -19,4 +19,4 @@ Disallow: /*&utm_term=
 Disallow: /*&utm_content=
 
 Sitemap: https://myhighroller.net/sitemap.xml
-Charset: UTF-8
+
