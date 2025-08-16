@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "games",
+  "info": {
+    "singularName": "game",
+    "pluralName": "games",
+    "displayName": "Game"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "provider": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "gameType": {
+      "type": "enumeration",
+      "enum": [
+        "slots",
+        "blackjack  ",
+        "roulette",
+        "poker",
+        "baccarat",
+        "live_dealer",
+        "other"
+      ]
+    },
+    "casinos": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::casino.casino",
+      "mappedBy": "games"
+    }
+  }
+}

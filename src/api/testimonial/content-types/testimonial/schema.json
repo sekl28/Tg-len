@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "testimonials",
+  "info": {
+    "singularName": "testimonial",
+    "pluralName": "testimonials",
+    "displayName": "Testimonial"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "review": {
+      "type": "richtext",
+      "required": true
+    },
+    "rating": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "max": 5
+    },
+    "city": {
+      "type": "text"
+    },
+    "isVerified": {
+      "type": "boolean",
+      "default": false
+    },
+    "casino": {
+      "type": "text"
+    }
+  }
+}

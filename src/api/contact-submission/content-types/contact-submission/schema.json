@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contact_submissions",
+  "info": {
+    "singularName": "contact-submission",
+    "pluralName": "contact-submissions",
+    "displayName": "ContactSubmission"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "subject": {
+      "type": "text"
+    },
+    "message": {
+      "type": "richtext"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "contact",
+        "review",
+        "complaint",
+        "suggestion"
+      ]
+    },
+    "city": {
+      "type": "text"
+    },
+    "rating": {
+      "type": "integer",
+      "min": 0,
+      "max": 5
+    },
+    "isProcessed": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

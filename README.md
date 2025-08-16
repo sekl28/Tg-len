@@ -1,187 +1,61 @@
-# 🎰 High Roller Casino - Агрегатор казино для Канады
+# 🚀 Getting started with Strapi
 
-Современный веб-сайт агрегатора онлайн казино, построенный на **Next.js 15** и **TailwindCSS**, с интеграцией **Strapi CMS**.
+Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
 
-## 🚀 Возможности
+### `develop`
 
-- **🎨 Полностью адаптивный дизайн** - идеально работает на всех устройствах
-- **⚡ Next.js 15** с App Router
-- **🎯 TailwindCSS** для стилизации
-- **📊 Интеграция со Strapi CMS** для управления контентом
-- **🔍 Система фильтров и поиска** казино
-- **📱 PWA Ready** - готов к установке как приложение
-- **🌐 SEO оптимизирован** с метатегами и структурированными данными
+Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
 
-## 📋 Страницы
-
-- **Главная страница** (`/`) - Hero секция, популярные казино, новости
-- **Страница категорий** (`/casinos/categories`) - Фильтры и список всех казино
-- **Детальная страница казино** (`/casinos/[slug]`) - Полная информация о казино
-- **FAQ секция** с аккордеоном
-- **Секция доверия** с преимуществами
-- **Квиз для подбора казино**
-
-## 🛠 Технологии
-
-- **Next.js 15.1.1** - React фреймворк
-- **React 18.2.0** - UI библиотека
-- **TypeScript 5.3.3** - Типизация
-- **TailwindCSS 3.4.1** - CSS фреймворк
-- **Strapi CMS** - Headless CMS
-- **Google Fonts** - Radio Canada, Inter, Onest
-
-## 📦 Установка и запуск
-
-### 1. Клонирование проекта
-```bash
-git clone <repository-url>
-cd my-high-roller
+```
+npm run develop
+# or
+yarn develop
 ```
 
-### 2. Установка зависимостей
-```bash
-npm install
+### `start`
+
+Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+
+```
+npm run start
+# or
+yarn start
 ```
 
-### 3. Настройка переменных окружения
-Создайте файл `.env.local`:
-```bash
-# Strapi API Configuration
-NEXT_PUBLIC_STRAPI_URL=http://localhost:1337
-NEXT_PUBLIC_STRAPI_API_TOKEN=your-api-token-here
+### `build`
 
-# Для продакшена используйте ваши реальные данные
-# NEXT_PUBLIC_STRAPI_URL=https://your-strapi-domain.com
-# NEXT_PUBLIC_STRAPI_API_TOKEN=your-production-api-token
+Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
+
 ```
-
-### 4. Запуск в режиме разработки
-```bash
-npm run dev
-```
-
-Откройте [http://localhost:3000](http://localhost:3000) в браузере.
-
-### 5. Сборка для продакшена
-```bash
 npm run build
-npm start
+# or
+yarn build
 ```
 
-## 🔧 Настройка Strapi CMS
+## ⚙️ Deployment
 
-### Структура данных в Strapi
+Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
 
-#### Collection Types:
+```
+yarn strapi deploy
+```
 
-1. **Casinos** (`casinos`)
-   - name (Text) - Название казино
-   - slug (UID) - URL slug
-   - description (Rich Text) - Полное описание
-   - shortDescription (Text) - Краткое описание
-   - logo (Media) - Логотип
-   - heroImage (Media) - Главное изображение
-   - rating (Decimal) - Рейтинг (1-5)
-   - userRating (Decimal) - Рейтинг пользователей
-   - bonusAmount (Text) - Сумма бонуса
-   - freeSpins (Text) - Количество фри-спинов
-   - isNew (Boolean) - Новое казино
-   - fastPayouts (Boolean) - Быстрые выплаты
-   - noDeposit (Boolean) - Без депозита
-   - licenseInfo (Text) - Информация о лицензии
-   - websiteUrl (Text) - Ссылка на сайт казино
-   - minDeposit (Text) - Минимальный депозит
-   - maxPayout (Text) - Максимальная выплата
-   - withdrawalSpeed (Text) - Скорость вывода
-   - customerSupport (Text) - Поддержка
-   - pros (JSON) - Преимущества
-   - cons (JSON) - Недостатки
-   - featured (Boolean) - Рекомендуемое
+## 📚 Learn more
 
-2. **Categories** (`categories`)
-   - name (Text) - Название категории
-   - slug (UID) - URL slug
-   - description (Text) - Описание
+- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
+- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
+- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
+- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
+- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
 
-3. **Payment Methods** (`payment-methods`)
-   - name (Text) - Название метода
-   - logo (Media) - Логотип
+Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
 
-4. **Articles** (`articles`)
-   - title (Text) - Заголовок
-   - slug (UID) - URL slug
-   - excerpt (Text) - Краткое описание
-   - content (Rich Text) - Содержание
-   - featuredImage (Media) - Изображение
-   - category (Text) - Категория
-   - publishedDate (DateTime) - Дата публикации
+## ✨ Community
 
-### Relations:
-- Casinos → Categories (Many-to-Many)
-- Casinos → Payment Methods (Many-to-Many)
-
-## 🎨 Компоненты
-
-- **CasinoCard** - Карточка казино
-- **FilterSidebar** - Боковая панель фильтров
-- **Pagination** - Компонент пагинации
-- **CasinoHeader** - Заголовок страницы казино
-- **ReviewCard** - Карточка отзыва
-
-## 🌍 API Endpoints
-
-### Основные функции:
-- `getCasinos(filters, page, pageSize)` - Получение списка казино
-- `getCasinoBySlug(slug)` - Получение казино по slug
-- `getFeaturedCasinos(limit)` - Рекомендуемые казино
-- `getCategories()` - Категории
-- `getPaymentMethods()` - Методы оплаты
-- `getNewsArticles(page, pageSize)` - Статьи
-
-## 📱 Адаптивность
-
-Сайт полностью адаптивен для всех размеров экранов:
-- **Mobile**: 320px+
-- **Tablet**: 768px+
-- **Desktop**: 1024px+
-- **Large Desktop**: 1440px+
-
-## 🚀 Деплой
-
-### Vercel (Рекомендуется)
-1. Подключите ваш репозиторий к Vercel
-2. Добавьте переменные окружения
-3. Деплойте автоматически
-
-### Другие платформы
-- Netlify
-- Railway
-- DigitalOcean App Platform
-
-## 📊 SEO и производительность
-
-- ✅ Server-Side Rendering (SSR)
-- ✅ Static Site Generation (SSG)
-- ✅ Оптимизация изображений
-- ✅ Мета-теги и Open Graph
-- ✅ Structured Data (JSON-LD)
-- ✅ Sitemap автогенерация
-
-## 🔍 Mock Data
-
-Если Strapi недоступен, система автоматически переключается на mock данные для разработки.
-
-## 📄 Лицензия
-
-MIT License
-
-## 🤝 Поддержка
-
-Если у вас есть вопросы или предложения:
-1. Создайте Issue в GitHub
-2. Отправьте Pull Request
-3. Свяжитесь с разработчиком
+- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
+- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
+- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
 
 ---
 
-**Примечание**: Для полной функциональности необходима настройка и запуск Strapi CMS с соответствующей структурой данных.
+<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>

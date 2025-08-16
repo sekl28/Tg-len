@@ -1,0 +1,247 @@
+{
+    "kind": "collectionType",
+    "collectionName": "casinos",
+    "info": {
+        "singularName": "casino",
+        "pluralName": "casinos",
+        "displayName": "Casino"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {
+        "i18n": {
+            "localized": true
+        }
+    },
+    "attributes": {
+        "name": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "required": true,
+            "unique": true
+        },
+        "slug": {
+            "type": "uid",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "targetField": "name",
+            "required": true
+        },
+        "description": {
+            "type": "richtext",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "required": true
+        },
+        "shortDescription": {
+            "type": "text",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "required": true
+        },
+        "logo": {
+            "type": "media",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": false
+                }
+            },
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "heroImage": {
+            "type": "media",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "multiple": false,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "rating": {
+            "type": "decimal",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "required": true
+        },
+        "userRating": {
+            "type": "decimal",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "required": true,
+            "min": 0,
+            "max": 5
+        },
+        "bonusAmount": {
+            "type": "text",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "required": true
+        },
+        "freeSpins": {
+            "type": "text",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "required": true
+        },
+        "isNew": {
+            "type": "boolean",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "default": false
+        },
+        "fastPayouts": {
+            "type": "boolean",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "default": false
+        },
+        "noDeposit": {
+            "type": "boolean",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "default": false
+        },
+        "licenseInfo": {
+            "type": "text",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "required": true
+        },
+        "websiteUrl": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "required": true
+        },
+        "pros": {
+            "type": "json",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "cons": {
+            "type": "json",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "minDeposit": {
+            "type": "text",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "maxPayout": {
+            "type": "text",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "withdrawalSpeed": {
+            "type": "text",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "customerSupport": {
+            "type": "text",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "licenses": {
+            "type": "json",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "tags": {
+            "type": "json",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "categories": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "api::category.category",
+            "inversedBy": "casinos"
+        },
+        "paymentMethods": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "api::payment-method.payment-method",
+            "inversedBy": "casinos"
+        },
+        "games": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "api::game.game",
+            "inversedBy": "casinos"
+        }
+    }
+}

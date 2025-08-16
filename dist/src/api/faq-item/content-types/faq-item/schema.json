@@ -1,0 +1,42 @@
+{
+    "kind": "collectionType",
+    "collectionName": "faq_items",
+    "info": {
+        "singularName": "faq-item",
+        "pluralName": "faq-items",
+        "displayName": "FAQItem"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "question": {
+            "type": "string",
+            "required": true
+        },
+        "answer": {
+            "type": "richtext",
+            "required": true
+        },
+        "category": {
+            "type": "enumeration",
+            "enum": [
+                "general",
+                "legal",
+                "payments",
+                "bonuses",
+                "account",
+                "responsible-gambling"
+            ]
+        },
+        "order": {
+            "type": "integer",
+            "default": 0
+        },
+        "isExpanded": {
+            "type": "boolean",
+            "default": false
+        }
+    }
+}
