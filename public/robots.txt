@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Block access to admin and API routes
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /private/
+
+# Allow specific pages
+Allow: /
+Allow: /casinos/
+Allow: /casinos/categories
+Allow: /blog/
+Allow: /about-us
+Allow: /responsible-gambling
+Allow: /contact-us
+Allow: /terms-conditions
+Allow: /privacy-policy
+
+# Sitemap location
+Sitemap: https://myhighroller.ca/sitemap.xml
+
+# Crawl delay (optional, be respectful)
+Crawl-delay: 1
